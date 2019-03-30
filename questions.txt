@@ -1,0 +1,4 @@
+Basic DSs (array, map, maybe set)
+Error handling
+Unit testing
+Build system + 3rd party libraries
