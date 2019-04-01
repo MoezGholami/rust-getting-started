@@ -2,3 +2,6 @@ Basic DSs (array, map, maybe set)
 Error handling
 Unit testing
 Build system + 3rd party libraries
+
+The difference between String and str
+Memory model in detail with a thorough snippet
