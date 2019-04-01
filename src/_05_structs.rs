@@ -12,6 +12,21 @@ impl fmt::Display for Student {
     }
 }
 
+impl Student {
+    fn increase_gpa(&mut self) {
+        self.gpa += 0.1;
+    }
+    fn name_length(&self) -> i32 {
+        return self.name.len() as i32;
+    }
+    fn max_possible_gpa() -> f32 {
+        return 4.33;
+    }
+    fn get_void_student() -> Student {
+        return Student{name: "void", gpa: 0.0};
+    }
+}
+
 fn print_student_name_copy_req(s : Student) {
     println!("{}", s.name);
 }
@@ -23,7 +38,11 @@ fn print_student_name(s : &Student) { // no copy, no change
 
 pub fn main() {
     let mut s : Student = Student{name: "ali", gpa: 3.5};
+    println!("maximum possible gpa is {}", Student::max_possible_gpa());
+    println!("void student: {}", Student::get_void_student());
     println!("student is {}", s);
+    s.increase_gpa();
+    println!("student now is {} with name length of {}.", s, s.name_length());
     s.name = "mamad";
     println!("student's name is \"{}\"", s.name);
     print_student_name(&s); print_student_name(&s); // we are lending s and ask to not to change it
