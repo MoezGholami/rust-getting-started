@@ -1,10 +1,10 @@
 /*
-mod _01_types;
-*/
 mod _02_flow_control;
+*/
+mod _01_types;
 fn main() {
     /*
-    _01_types::main();
-    */
     _02_flow_control::main();
+    */
+    _01_types::main();
 }

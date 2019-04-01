@@ -2,6 +2,6 @@
 name = "rustut"
 version = "0.1.0"
 authors = ["MoezGholami <Ali.Moez.Gholami@GMail.COM>"]
-edition = "2019"
+edition = "2018"
 
 [dependencies]
