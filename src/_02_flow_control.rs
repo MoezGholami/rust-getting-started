@@ -40,13 +40,14 @@ pub fn main() {
         }
     }
 
-    let someInt = 3;
-    match someInt%6 {
+    let some_int = 3;
+    match some_int%6 {
         1 => println!("odd number"),
         0 => {
             println!("even number");
         },
         3 | 5 => println!("odd number"),
+        9...19 => println!("illegal !!!"),
         _ => println!("no idea")
     }
 }
