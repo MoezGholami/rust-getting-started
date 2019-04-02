@@ -12,6 +12,16 @@ impl fmt::Display for Student {
     }
 }
 
+trait Human { // they are like java interface
+    fn get_name(&self) -> String;
+}
+
+impl Human for Student {
+    fn get_name(&self) -> String {
+        return self.name.to_string();
+    }
+}
+
 impl Student {
     fn increase_gpa(&mut self) {
         self.gpa += 0.1;
@@ -42,7 +52,7 @@ pub fn main() {
     println!("void student: {}", Student::get_void_student());
     println!("student is {}", s);
     s.increase_gpa();
-    println!("student now is {} with name length of {}.", s, s.name_length());
+    println!("student now is {} with name length of \"{}\": {}.", s, s.get_name(), s.name_length());
     s.name = "mamad";
     println!("student's name is \"{}\"", s.name);
     print_student_name(&s); print_student_name(&s); // we are lending s and ask to not to change it
