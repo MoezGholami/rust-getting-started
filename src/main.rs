@@ -6,7 +6,7 @@ mod _04_scope_and_intro_pointer;
 mod _05_structs;
 mod _06_data_structures;
 */
-mod _05_structs;
+mod _06_data_structures;
 fn main() {
     /*
     _01_types::main();
@@ -16,5 +16,5 @@ fn main() {
     _05_structs::main();
     _06_data_structures::main();
     */
-    _05_structs::main();
+    _06_data_structures::main();
 }

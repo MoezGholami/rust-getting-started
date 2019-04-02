@@ -3,6 +3,7 @@ pub fn main() {
     // */
     array_demo();
     string_demo();
+    vector_demo();
 }
 
 fn array_demo() {
@@ -35,4 +36,17 @@ fn string_demo() {
     println!("Javad {} in the roster.", if roster.contains("Javad") { "is" } else { "is not" });
     roster.push_str(",Javad");
     println!("Javad now {} in the roster.", if roster.contains("Javad") { "is" } else { "is not" });
+}
+
+fn vector_demo() {
+    let mut two_numbers: Vec<i32> = Vec::new();
+    two_numbers.push(0);
+    two_numbers.push(1);
+    let armstrong_numbers = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407];
+
+    println!("binary digits: {:?}", two_numbers);
+    println!("There are {} Arsmstrong numbers under 1000:", armstrong_numbers.len());
+    for (i,a) in armstrong_numbers.iter().enumerate() {
+        println!("{}:\t{}", i+1, a);
+    }
 }
