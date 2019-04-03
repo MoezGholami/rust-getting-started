@@ -58,13 +58,24 @@ fn map_demo() {
     // to have hash map with custom key type, Eq and Hash traits must be implemented
     let mut gpa : HashMap<&str, f32> = HashMap::new();
     let default_grade : f32 = -1.0;
+
     gpa.insert("Ali", 3.5);
     gpa.insert("Vali", 3.7);
-    gpa.insert("Vali", 3.7);
+    gpa.insert("Vali", 3.0);
+    gpa.insert("Gholam", 3.1);
+    gpa.insert("Gholi", 3.2);
+    gpa.insert("Ghamar", 3.3);
+
     println!("Map size is: {}", gpa.len());
     println!("We {}have Mali's grade.", if gpa.contains_key("Mali") { "" } else { "don't "} );
     gpa.remove("Ali");
     println!("We don't have Ali's grade anymore! map contains \"Ali\"? --> {}", gpa.contains_key("Ali"));
     println!("gpa of Ali: {}", match gpa.get("Ali") { Some(grade) => grade, None => &default_grade });
     println!("gpa of Vali: {}", match gpa.get("Vali") { Some(grade) => grade, None => &default_grade });
+    println!("here are is the grade list:");
+    for _ in 0..2 {
+        for (k, v) in gpa.iter() {
+            println!("{}:\t{}", k, v);
+        }
+    }
 }
