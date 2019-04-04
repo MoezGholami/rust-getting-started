@@ -5,3 +5,4 @@ authors = ["MoezGholami <Ali.Moez.Gholami@GMail.COM>"]
 edition = "2018"
 
 [dependencies]
+reqwest = "0.9.13"
