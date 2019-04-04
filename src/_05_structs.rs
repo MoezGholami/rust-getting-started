@@ -6,6 +6,14 @@ struct Student {
 
 struct Color(u8, u8, u8);
 
+#[derive(Debug)]
+enum Direction {
+    Right,
+    Up,
+    Down,
+    Left
+}
+
 impl fmt::Display for Student {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         return write!(f, "Student {} with GPA {} .", self.name, self.gpa);
@@ -37,6 +45,17 @@ impl Student {
     }
 }
 
+// methods could be added to enums too
+impl Direction {
+    fn is_horizontal(&self) -> bool {
+        return match self {
+            Direction::Left | Direction::Right => true,
+            Direction::Up | Direction::Down => false,
+            _ => false
+        }
+    }
+}
+
 fn print_student_name_copy_req(s : Student) {
     println!("{}", s.name);
 }
@@ -63,4 +82,8 @@ pub fn main() {
     println!("my favorite color is ({},{},{})", green.0, green.1, green.2);
     green.1 = 180;
     println!("a bit darker actually ({},{},{})", green.0, green.1, green.2);
+    
+    let d = Direction::Left;
+    println!("Is {:?} horizontal? --> {}", d, d.is_horizontal());
+    println!("Is Up horizontal? --> {}", Direction::Up.is_horizontal());
 }

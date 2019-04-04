@@ -8,7 +8,7 @@ mod _06_data_structures;
 mod _07_io;
 mod _08_web;
 */
-mod _08_web;
+mod _05_structs;
 fn main() {
     /*
     _01_types::main();
@@ -20,5 +20,5 @@ fn main() {
     _07_io::main();
     _08_web::main();
     */
-    _08_web::main();
+    _05_structs::main();
 }
